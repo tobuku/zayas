@@ -50,10 +50,22 @@
     }
 
     .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       color: var(--white);
       letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      height: 48px;
+      width: 48px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
     }
 
     .nav-brand span { color: var(--green-bright); }
@@ -782,7 +794,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">Zaya<span>'s</span> Landscaping</div>
+  <a href="#hero" class="nav-brand">
+    <img src="zayaslandscaping.png" alt="Zaya's Landscaping logo">
+    Zaya<span>'s</span> Landscaping
+  </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
     <li><a href="#why">Why Us</a></li>

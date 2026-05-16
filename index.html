@@ -479,6 +479,102 @@
       font-weight: 500;
     }
 
+    /* ── TESTIMONIALS ── */
+    #testimonials {
+      background: var(--green-dark);
+      text-align: center;
+    }
+
+    #testimonials .section-label { color: var(--green-bright); }
+    #testimonials .section-title { color: var(--white); }
+    #testimonials .section-sub   { color: rgba(255,255,255,0.7); margin: 0 auto 3rem; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 2rem 1.75rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--green-bright);
+    }
+
+    .testimonial-quote {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-quote::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--green-bright);
+      line-height: 0;
+      vertical-align: -0.6rem;
+      margin-right: 0.2rem;
+      font-style: normal;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: var(--green-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .author-info { display: flex; flex-direction: column; }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+
+    .author-detail {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--green-dark);
@@ -692,6 +788,7 @@
     <li><a href="#why">Why Us</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact" class="nav-cta">Free Quote</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -908,6 +1005,125 @@
   <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label">What Clients Say</div>
+  <h2 class="section-title">Real Reviews from Real Customers</h2>
+  <p class="section-sub">We let our work — and our customers — speak for themselves.</p>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">Zaya's completely transformed our backyard. The team was professional, showed up on time, and the finished lawn looked better than we ever expected. We get compliments from neighbors constantly now.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">M</div>
+        <div class="author-info">
+          <span class="author-name">Maria T.</span>
+          <span class="author-detail">Lawn Maintenance Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">I've used several landscaping companies over the years and Zaya's is the most reliable by far. They've been maintaining our property for two seasons now — consistent quality every single visit.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">D</div>
+        <div class="author-info">
+          <span class="author-name">David R.</span>
+          <span class="author-detail">Seasonal Maintenance Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">Got a quote from three companies. Zaya's was competitive on price and they were the only ones who actually came out and walked the property before quoting. That kind of attention to detail shows in their work.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">S</div>
+        <div class="author-info">
+          <span class="author-name">Sandra K.</span>
+          <span class="author-detail">Landscape Design Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">Our hedges and front beds look incredible. Zaya's crew took their time and cleaned everything up before leaving. The yard looked brand new. Already scheduled them to come back next month.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">J</div>
+        <div class="author-info">
+          <span class="author-name">James &amp; Lisa P.</span>
+          <span class="author-detail">Trimming &amp; Cleanup Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">Fast, friendly, and fair. I called on a Monday and they were out by Wednesday. The spring cleanup was thorough — beds edged, leaves hauled away, everything looking sharp. Highly recommend.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">A</div>
+        <div class="author-info">
+          <span class="author-name">Angela W.</span>
+          <span class="author-detail">Spring Cleanup Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="testimonial-quote">Worth every penny. My lawn went from patchy and overgrown to one of the nicest on the street. The team is respectful of the property and genuinely takes pride in what they do. Won't use anyone else.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">R</div>
+        <div class="author-info">
+          <span class="author-name">Robert N.</span>
+          <span class="author-detail">Full Service Customer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact">

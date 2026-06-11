@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Zaya's Landscaping — single-page static website hosted on GitHub Pages at https://tobuku.github.io/zayas/
+Zaya's Landscaping — single-page static website hosted on GitHub Pages with custom domain https://zayaslandscapinghawaii.com/
 
 No build step, no framework, no dependencies. Edit `index.html` directly and push to deploy.
 
@@ -31,7 +31,7 @@ Internal order matches the page layout:
 6. `#about` — flex row: text left, logo image right
 7. `#gallery` — 9-item grid with lightbox (first item spans 2 columns)
 8. `#testimonials` — 6 review cards on dark green background
-9. `#contact` — Formspree form (action URL contains `YOUR_FORMSPREE_ID` placeholder)
+9. `#contact` — Formspree form (endpoint: xkoaqjgy), phone: (808) 302-4437
 10. `#lightbox` — fixed overlay, controlled by JS
 11. `<footer>`
 12. `<script>` — inline JS for nav toggle, gallery lightbox, and Formspree AJAX submit
@@ -54,7 +54,10 @@ All images are local files committed to the repo root:
 | `IMG_4130.JPG` | Gallery slot 7 |
 | `IMG_8044.JPG` | Gallery slot 8 |
 
-## Pending setup
+## SEO
 
-- **Contact form**: replace `YOUR_FORMSPREE_ID` in the form `action` attribute with a real Formspree endpoint (formspree.io → create form → use Gmail address as destination)
-- **Phone/email**: removed from contact section — add back when ready
+- Custom domain: zayaslandscapinghawaii.com (CNAME file in repo root)
+- Canonical URL, Open Graph, Twitter Card meta tags in `<head>`
+- JSON-LD `LandscapingBusiness` structured data
+- `robots.txt` and `sitemap.xml` in repo root
+- Sitemap URL for GSC: https://zayaslandscapinghawaii.com/sitemap.xml
